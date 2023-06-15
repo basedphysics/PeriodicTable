@@ -88,7 +88,7 @@ const transitionMetals = [
         return (<div className='w-12 h-12 flex justify-center items-center bg-red-400'>{element}</div>)
       }
       return (<button onClick={() => setSelectedElement(element)}>
-        <div className={`w-12 h-12 flex justify-center items-center ${backgroundColor}`}>{element}</div>
+        <div className={`w-12 h-12 flex justify-center items-center hover:scale-110 ${backgroundColor}`}>{element}</div>
         </button>)
     })}
       </div>
