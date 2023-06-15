@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { ControlPanel } from './ControlPanel';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 function App() {
 
@@ -47,11 +49,13 @@ const transitionMetals = [
         {menuOpen ? <div>
           <div className="fixed left-0 w-52 h-screen bg-slate-200"></div>
           <button onClick={() => setMenuOpen(false)}>
-          <div className="bg-black h-8 w-8 fixed left-4 top-4"></div>
+          <XMarkIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
           </button>
           </div> :
           <button onClick={() => setMenuOpen(true)}>
-          <div className="bg-black h-8 w-8 fixed left-4 top-4"></div>
+          <div className="fixed left-4 top-4">
+          <Bars3Icon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
+          </div>
         </button>}
         <div className="flex flex-col gap-20 items-center">
 
@@ -92,6 +96,7 @@ const transitionMetals = [
         </button>)
     })}
       </div>
+      <ControlPanel />
       </div>
     </div>
   )
